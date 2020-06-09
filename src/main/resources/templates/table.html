@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<!--/* Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 -->
+<!--@thymesVar id="msg" type="String"-->
+<!--*/-->
+<!--/*@thymesVar id="name" type="mame"*/-->
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <table cellpadding="2"  class="alll">
+        <tr>
+            <td>姓名</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.address}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

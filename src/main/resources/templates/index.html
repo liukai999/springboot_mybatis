@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+
+  <title  th:text="${name}"/>
+  <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+<!--/* Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 -->
+<!--@thymesVar id="msg" type="String"-->
+<!--*/-->
+<!--/*@thymesVar id="name" type="mame"*/-->
+
+<div class="login-box">
+
+  <h2 th:text="${ name}">登入</h2>
+  <form action="http://localhost:8080/login" method="post">
+    <div class="user-box">
+      <input type="text" name="username" required=""   autocomplete="off" >
+      <label>用户名</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required=""  autocomplete="off"  >
+      <label  >密码</label>
+    </div>
+
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+       登录
+     <input type="submit" th:value="${error}">
+
+    </a>
+  </form>
+</div>
+
+  
+</body>
+</html>

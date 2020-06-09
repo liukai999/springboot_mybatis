@@ -1,0 +1,21 @@
+server:
+  port: 9908
+user:
+  user: xiaoliu
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oldman?useUnicode=ture&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: test
+    password: 123456
+  thymeleaf:
+    prefix: classpath:/templates/
+    # 开发阶段关闭thymeleaf的模板缓存
+    cache: false
+mybatis:
+  type-aliases-package: com.test.model
+  mapper-locations: calsspath:mapper/**.xml
+
+
